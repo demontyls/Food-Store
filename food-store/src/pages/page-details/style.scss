@@ -1,0 +1,26 @@
+.details-page {
+  background: white;
+  padding: 24px;
+  height: 100%;
+
+  .product-card {
+    max-width: 600px;
+    height: fit-content;
+    margin: auto;
+    padding: 32px;
+
+    .img-wrapper {
+      height: 350px;
+    }
+
+    .text-truncate {
+      overflow: visible;
+      white-space: unset;
+    }
+
+
+    > div {
+      padding-top: 24px;
+    }
+  }
+}

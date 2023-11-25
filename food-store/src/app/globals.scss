@@ -1,0 +1,49 @@
+$primary: red!default;
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+.layout-body {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  height: 100vh;
+
+  .page {
+    flex-grow: 1;
+  }
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 32px;
+  padding: 32px;
+  background: #FAFCFF;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+
+    .h2, .h3 {
+      padding-left: 24px;
+    }
+  }
+}

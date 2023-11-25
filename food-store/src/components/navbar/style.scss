@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 8px;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
+
+    a {
+      width: fit-content;
+    }
+  }
+
+  a {
+    width: 100%;
+    padding: 4px 12px;
+
+    @media (max-width: 768px) {
+        width: fit-content;
+    }
+
+    &:hover {
+      color: rgba(13, 110, 253, 0.8);
+    }
+
+    &.active {
+      color: rgb(13, 110, 253);
+    }
+  }
+}
+.navbar-wrapper {
+  @media (max-width: 768px) {
+    display: flex;
+    gap: 16px;
+  }
+}

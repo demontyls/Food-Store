@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  width: 100%;
+  padding-left: 48px;
+  padding-right: 32px;
+  border-bottom: 1px solid #E6E6E6;
+  background: white;
+
+  position: fixed;
+  top: 0;
+  z-index: 2;
+
+  @media (max-width: 768px) {
+    padding: 16px;
+  }
+}

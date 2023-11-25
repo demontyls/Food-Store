@@ -1,0 +1,32 @@
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+
+  > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.icon-sort {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url("../../pix/sort-arrow.svg");
+  background-size: contain;
+
+  &[data-order="ASC"] {
+    transform: rotate(180deg);
+  }
+}

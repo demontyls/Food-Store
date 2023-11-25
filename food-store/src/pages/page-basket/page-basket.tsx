@@ -2,14 +2,13 @@
 import React, {useContext, useState} from 'react';
 import { IStoreProvider, StoreContext } from '@/providers/StoreProvider';
 import ListCards from '@/components/list-cards/list-cards';
-import Filters from "@/components/filters/filters";
-import TileCards from "@/components/tile-cards/tail-cards";
+import TileCards from '@/components/tile-cards/tail-cards';
 
 const BasketContent = () => {
   const { basket, setBasket } = useContext<IStoreProvider>(StoreContext);
   const [ viewList, setViewList] = useState(true);
-  const uniqueProducts = basket.filter((elem, index) => index === basket.findIndex((x) => x.prodId === elem.prodId ));
-  const isEmpty: boolean = !Boolean(basket.length);
+  const uniqueProducts = basket?.filter((elem, index) => index === basket.findIndex((x) => x.prodId === elem.prodId ));
+  const isEmpty: boolean = !Boolean(basket?.length);
   const clearCart = (): void => {
     setBasket([]);
   }

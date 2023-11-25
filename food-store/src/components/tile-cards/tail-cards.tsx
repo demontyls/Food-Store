@@ -1,3 +1,4 @@
+'use client'
 import React, {FC} from 'react';
 import {IProduct} from '@/services/services';
 import Card from '@/components/card/card';
@@ -11,7 +12,7 @@ const TileCards: FC<ITileCards> = ({ products }) => {
   const pathname = usePathname();
   return (
     <div className="cards">
-      {products.map(product => <Card key={product.id} data={product} path={pathname ?? ''} />)}
+      {products?.map(product => <Card key={product.id} data={product} path={pathname ?? ''} />)}
     </div>
   );
 };

@@ -11,7 +11,7 @@ const ListCards: FC<IListCards> = ({ products }) => {
   const pathname = usePathname();
   return (
     <div className="list-cards">
-      {products.map(product => <Card key={product.id} data={product} path={pathname ?? ''} />)}
+      {products?.map(product => <Card key={product.id} data={product} path={pathname ?? ''} />)}
     </div>
   );
 };

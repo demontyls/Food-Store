@@ -14,10 +14,10 @@ interface ICard {
 
 const Card: FC<ICard> = ({ data, path }) => {
   const { basket, setBasket } = useContext<IStoreProvider>(StoreContext);
-  const detailsPath: string = `${path}/${data.id}`;
-  const price: string = `${Math.trunc(+data.price)}₽`;
+  const detailsPath: string = `${path}/${data?.id}`;
+  const price: string = `${Math.trunc(+data?.price)}₽`;
   const btnClassName = 'btn btn-warning btn-sm rounded-5 text-white';
-  const hasProducts = basket.filter(elem => elem.prodId === data.prodId );
+  const hasProducts = basket?.filter(elem => elem.prodId === data.prodId );
   const addToBasket = (e:any, product: IProduct) => {
     e.preventDefault();
     setBasket([...basket, product]);
@@ -34,27 +34,27 @@ const Card: FC<ICard> = ({ data, path }) => {
     <div className="product-card">
         <Link href={detailsPath} >
           <div className="img-wrapper">
-            <CustomImage alt={data.name} src={data.avatar} width={100} />
-            {data.isNew && <div className="badge">new</div>}
+            <CustomImage alt={data?.name} src={data?.avatar} width={100} />
+            {data?.isNew && <div className="badge">new</div>}
           </div>
         </Link>
         <div className="content-card">
           <div>
             <h5 className="h6 text-truncate">
-              {data.name}
+              {data?.name}
             </h5>
           </div>
           <p className="text-truncate mb-2">
-            {data.description}
+            {data?.description}
           </p>
           <div className="d-flex align-items-center justify-content-between">
             <div className="price">
               {price}
             </div>
-            {hasProducts.length >= 1 ?
+            {hasProducts?.length >= 1 ?
                <div className="product-counter">
                   <button className={btnClassName} onClick={() => removeFromBasket(data)}>-</button>
-                    <span>{hasProducts.length}</span>
+                    <span>{hasProducts?.length}</span>
                   <button className={btnClassName} onClick={e => addToBasket(e, data)}>+</button>
                </div> :
               <button className={btnClassName} onClick={e => addToBasket(e,data)}>

@@ -1,7 +1,7 @@
 # Food-Store
 Home delivery of food products 
 
-Используемый стек и блиблиотеки
+Используемый стек и библиотеки
 - bootstra: 5;
 - next: 14.0.3;
 - react: 18;

@@ -5,7 +5,7 @@ Home delivery of food products
 - bootstra: 5;
 - next: 14.0.3;
 - react: 18;
-- sass: --;
+- sass: 1.69.5;
 
 Функицонал сайта
 - Фильтр товаров по разнообразным параметрам;

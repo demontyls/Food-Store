@@ -2,10 +2,10 @@
 Home delivery of food products 
 
 Используемый стек и блиблиотеки
-bootstra: 5,
-next: 14.0.3,
-react: 18,
-sass: --
+- bootstra: 5;
+- next: 14.0.3;
+- react: 18;
+- sass: --;
 
 Функицонал сайта
 - Фильтр товаров по разнообразным параметрам;

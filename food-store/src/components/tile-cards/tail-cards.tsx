@@ -1,4 +1,3 @@
-'use client'
 import React, {FC} from 'react';
 import {IProduct} from '@/services/services';
 import Card from '@/components/card/card';

@@ -11,10 +11,8 @@ export const handlerSort = (elem:IFilterElement, data: IProduct[], setData: (val
   
   if (elem.order == "ASC") {
     copyData.sort( (a:any, b:any) => castType(a[field]) < castType(b[field]) ? 1 : -1);
-    // elem.order = "DESC";
   } else  {
     copyData.sort( (a:any, b:any) => castType(a[field]) > castType(b[field]) ? 1 : -1);
-    // elem.order = "ASC";
   }
   
   elem.order = elem.order == "ASC" ? "DESC" : "ASC"

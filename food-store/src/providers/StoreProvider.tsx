@@ -1,6 +1,6 @@
 'use client'
-import {createContext, ReactNode, useEffect, useState} from "react";
-import {IProduct} from '@/services/services';
+import { createContext, ReactNode, useEffect, useState } from 'react';
+import { IProduct } from '@/services/services';
 
 const defaultValue = {};
 
@@ -21,19 +21,19 @@ export const StoreProvider = ({children}: { children: ReactNode }) => {
 
 export const useStoreProvider = ():IStoreProvider => {
   const [basket, setBasket] = useState<IProduct[]>([]);
-  
+
   useEffect(()=> {
     if(localStorage.getItem('FoodStore')) {
         setBasket(JSON.parse(localStorage.getItem('FoodStore') ?? ''))
     }
   },[])
-  
+
   useEffect(()=>{
     if (basket.length) {
         localStorage.setItem('FoodStore', JSON.stringify(basket));
     }
   }, [basket]);
-  
+
   return {
     basket,
     setBasket

@@ -1,0 +1,14 @@
+.burger {
+  @media (min-width: 768px) {
+    display: none!important;
+  }
+}
+.icon-burger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: url("../../pix/menu.svg");
+  background-size: contain;
+}

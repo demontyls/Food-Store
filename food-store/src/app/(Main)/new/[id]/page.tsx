@@ -1,8 +1,12 @@
-import { NextPage } from 'next';
+import {Metadata, NextPage} from 'next';
 import React from 'react';
 import { getDetail, IProduct } from '@/services/services';
 import PageDetails from '@/pages/page-details/page-details';
 
+export const metadata: Metadata = {
+  title: 'Food Store | New',
+  description: 'New product details page',
+}
 const NewDetails: NextPage<any> = async ({params}) => {
   const data: IProduct = await getDetail('/pies', params.id);
   

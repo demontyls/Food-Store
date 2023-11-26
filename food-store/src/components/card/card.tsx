@@ -1,16 +1,15 @@
 'use client'
-import React, {FC, useContext, useEffect, useState} from 'react';
+import React, { FC, useContext } from 'react';
 import Link from 'next/link';
-import {IProduct} from '@/services/services';
-import CustomImage from "@/components/custom-Image/Custom-image";
+import { IProduct } from '@/services/services';
+import CustomImage from '@/components/custom-Image/Custom-image';
 import './style.scss'
-import {IStoreProvider, StoreContext, StoreProvider} from "@/providers/StoreProvider";
+import { IStoreProvider, StoreContext } from '@/providers/StoreProvider';
 
 interface ICard {
   data: IProduct;
   path: string
 }
-
 
 const Card: FC<ICard> = ({ data, path }) => {
   const { basket, setBasket } = useContext<IStoreProvider>(StoreContext);
